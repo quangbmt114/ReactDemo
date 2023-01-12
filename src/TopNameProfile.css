@@ -48,3 +48,22 @@ h2{
 .Work-Experience{
     margin-top: 5%;
 }
+.Projects{
+    margin-top: 20px;
+}
+table{
+    margin: 30px 0;
+    border: 1px solid black;
+    width: 100%;
+}
+th{
+    width: 30%;
+    border: 1px solid black;
+   
+}
+td{
+    width: 70%;
+    padding-left: 10px;
+    border: 1px solid black;
+   
+}

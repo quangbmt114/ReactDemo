@@ -2,6 +2,7 @@
 import './App.css';
 import { useState,createContext, useContext } from 'react';
 import { StoreContext, } from './store';
+import TopNameProfile from './TopNameProfile'
 export const  ThemeContext = createContext()
 function App() {
   const [toggle,setToggle]= useState(false)
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <button onClick={ToggleTheme}>Toggle Theme</button>
+      <TopNameProfile/>
     </div>
   );
 }
