@@ -3,13 +3,12 @@ import { Container } from "react-bootstrap";
 import Header from "../Header/index";
 
 function DefaultLayout({ children }) {
-    const [searchResult,setSearchResult]= useState([])
+    const [searchResult,setSearchResult]= useState("")
 useEffect(() => {
     handleSetSearch()
 }, []);
     const handleSetSearch=(val)=>{
         setSearchResult(val)
-        
     }
     return (
         <div>

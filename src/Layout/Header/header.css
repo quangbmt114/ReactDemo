@@ -30,3 +30,7 @@
     color: white;
     background-color: rgb(174, 174, 247);
 }
+.header_login{
+    margin-left: 20px;
+    line-height: 45px;
+}

@@ -8,38 +8,17 @@ import axios from 'axios'
 function Component(props) {
    const [searchResult,setSearchResult]= useState([])
    const  limit =8;
-   const [page,setPage]=useState(1)
-   let array = [];
-   const queryString = window.location.search;
-console.log({queryString});
    const API = async()=>{
       const data = await axios.get("https://61a5e3c48395690017be8ed2.mockapi.io/blogs/article")
      if(data.status===200){
-      setSearchResult(props.dataComponent||data.data) 
-         console.log("props",props.dataComponent)
+      const newData =props.dataComponent.slice((props.page-1)*limit,props.page*limit)
+      setSearchResult(newData)
    }
      }
+
  useEffect(() => {
    API()
  }, [props]);
- let items = [];
- if(searchResult.length>0){
-  
-   for (let number = 1; number <= Math.ceil(searchResult.length / limit); number++) {
-     items.push(
-       <Pagination.Item
-         onClick={() => {
-           setPage(number);
-         }}
-         key={number}
-         active={number === page}
-         to={"/page"}
-       >
-         {number}
-       </Pagination.Item>
-     );
-   }
- }
    if(searchResult.length===0){
       return (
         <div className='content_home'>
@@ -62,7 +41,7 @@ console.log({queryString});
             <div className='component_content'>
             
             <p style={{ fontWeight: "bold", marginBottom: 5 }}>
-                <Link to={`/post/`} >{posts.name}</Link>
+                <Link to={`/post/${posts.id}`} >{posts.name}</Link>
               </p>
               <p>{posts.description}</p>
             </div>
@@ -71,9 +50,7 @@ console.log({queryString});
          )
       })}
       </Row>
-      
-      <div className="sliderPage"><Pagination>{items}</Pagination></div>
-   </div>
+      </div>
   )
 }
 export default Component

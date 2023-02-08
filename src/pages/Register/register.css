@@ -1,0 +1,13 @@
+.content_register{
+    min-height: 700px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    line-height: 10px;
+}
+.content_register_mini{
+    width: 500px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}

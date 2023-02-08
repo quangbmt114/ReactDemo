@@ -5,7 +5,10 @@ import Following from "../src/pages/Following/index"
 import DefaultLayout from "./Layout/DefaultLayout";
 import Profile from "./pages/Profile";
 import Upload from "./pages/Upload";
+import Login from "./pages/Login/Login";
 import { Fragment,useState } from "react";
+import Register from "./pages/Register/Register";
+import Detail from "./pages/Detail";
 
 function App() {
   const publicRoutes = [
@@ -13,9 +16,10 @@ function App() {
     { path: '/following', component: Following },
     { path: '/profile', component: Profile },
     { path: '/upload', component: Upload, layout: null }
+    ,{path:"/login",component:Login},
+    {path:"/register",component:Register},
+    {path:"/post/*",component:Detail}
   ]
-const [data,setData]=useState([])
-
   return (
     <Router>
       <div className="App">
