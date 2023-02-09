@@ -9,6 +9,7 @@ import Login from "./pages/Login/Login";
 import { Fragment,useState } from "react";
 import Register from "./pages/Register/Register";
 import Detail from "./pages/Detail";
+import ListPost from "./pages/ListPost";
 
 function App() {
   const publicRoutes = [
@@ -18,7 +19,8 @@ function App() {
     { path: '/upload', component: Upload, layout: null }
     ,{path:"/login",component:Login},
     {path:"/register",component:Register},
-    {path:"/post/*",component:Detail}
+    {path:"/post/*",component:Detail},
+    {path:"/listpost", component:ListPost}
   ]
   return (
     <Router>

@@ -6,9 +6,9 @@ import './home_content.css'
 
 
 const Home =(props)=>{
+      console.log()
   const limit =8;
   const [page, setPage] = useState(1);
-  const [searchValue, setSearchValue] = useState("")
   const [data,setData]=useState([])
   let items = [];
   const API = async()=>{

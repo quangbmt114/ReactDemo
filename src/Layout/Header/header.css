@@ -1,11 +1,16 @@
 .wrap_header{
+    width: 100%;
    height: 50px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: white;
    box-shadow:  0px 1px 1px rgb(205, 201, 201,50%);
 }
 
 .logo_pages{
     display:flex;
-   
+    position: fixed;
 }
 .wrap_header img{
    height: 35px;
@@ -33,4 +38,18 @@
 .header_login{
     margin-left: 20px;
     line-height: 45px;
+}
+.list_post{
+    width: 80px;
+    margin-left: 15px;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 45px;
+    text-align: center;
+}
+.list_post:hover{
+    transition: 0.4s;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
 }

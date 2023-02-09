@@ -27,11 +27,13 @@ function Header({onSetSearch}) {
                 <Link to={"/"}>
                     <img src={logopages} />
                 </Link>
-                <h3>Home</h3>
+                <Link to={"/listpost"}  className="list_post"> List Post</Link>
                 <div className="header_search">
+                
                     <input placeholder="bạn muốn tìm ?" onChange={handleSearchData} />
                     <button className="button_search">Search</button>
                 </div>
+                
                 <div className="header_login">
                             <Link to={"/login"}><Button>ĐĂNG NHẬP</Button></Link>
                 </div>

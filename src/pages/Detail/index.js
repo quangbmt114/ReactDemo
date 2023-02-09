@@ -21,7 +21,7 @@ useEffect(() => {
                 <img src={post.picture}/>
             </div>
             <div className='detail_content'>
-                <h2>{post.name}</h2>
+                <h2 style={{marginBottom:20}}>{post.name}</h2>
                 <p>{post.description}</p>
             </div>
         </div>

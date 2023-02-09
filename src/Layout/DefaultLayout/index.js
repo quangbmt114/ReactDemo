@@ -13,7 +13,7 @@ useEffect(() => {
     return (
         <div>
         <Header onSetSearch={handleSetSearch}  />
-        <Container>
+        <Container style={{marginTop:50}}>
             <div className="content">
                 {children({data:searchResult })}
             </div> 
