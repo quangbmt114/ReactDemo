@@ -5,7 +5,7 @@ import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './component.css'
 import axios from 'axios'
-function Component(props) {
+function ManagerComponent(props) {
    const [searchResult,setSearchResult]= useState([])
    const  limit =8;
    const API = async()=>{
@@ -39,7 +39,8 @@ function Component(props) {
                <img src={posts.picture} />
             </div>
             <div className='component_content'>
-            
+            <img className="component_del" src={Del} 
+         />
             <p style={{ fontWeight: "bold", marginBottom: 5 }}>
                 <Link to={`/post/${posts.id}`} >{posts.name}</Link>
               </p>
@@ -53,4 +54,4 @@ function Component(props) {
       </div>
   )
 }
-export default Component
+export default ManagerComponent

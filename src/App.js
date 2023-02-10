@@ -6,10 +6,11 @@ import DefaultLayout from "./Layout/DefaultLayout";
 import Profile from "./pages/Profile";
 import Upload from "./pages/Upload";
 import Login from "./pages/Login/Login";
-import { Fragment,useState } from "react";
+import { Fragment } from "react";
 import Register from "./pages/Register/Register";
 import Detail from "./pages/Detail";
 import ListPost from "./pages/ListPost";
+import Manager from "./pages/ManagerPage";
 
 function App() {
   const publicRoutes = [
@@ -20,7 +21,8 @@ function App() {
     ,{path:"/login",component:Login},
     {path:"/register",component:Register},
     {path:"/post/*",component:Detail},
-    {path:"/listpost", component:ListPost}
+    {path:"/listpost", component:ListPost},
+    {path:"/manager_page",component:Manager}
   ]
   return (
     <Router>

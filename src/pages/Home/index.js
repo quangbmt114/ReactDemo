@@ -6,7 +6,6 @@ import './home_content.css'
 
 
 const Home =(props)=>{
-      console.log()
   const limit =8;
   const [page, setPage] = useState(1);
   const [data,setData]=useState([])

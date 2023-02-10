@@ -40,6 +40,7 @@
     line-height: 45px;
 }
 .list_post{
+   
     width: 80px;
     margin-left: 15px;
     text-decoration: none;
@@ -52,4 +53,20 @@
     background-color: blue;
     color: white;
     font-weight: bold;
+}
+.manager_page{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 45px;
+    text-align: center;
+}
+.manager_page:hover{
+    transition: 0.4s;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+.abc{
+        visibility: hidden;
 }
