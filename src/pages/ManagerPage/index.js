@@ -40,7 +40,7 @@ function Manager(props) {
           <div className="content_home1">
             <ManagerComponent dataComponent={data}
             page={page}
-            
+            onReload
              />
             <div className="listPage">
             <Pagination>{items}</Pagination>
