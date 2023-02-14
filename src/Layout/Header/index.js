@@ -14,19 +14,9 @@ function Header({onSetSearch}) {
             setSearchValue(e.target.value)
         },2000);
     }
-    const onHandleRemoveManager = ()=>{
-           const style =  document.getElementsByClassName("manager_page")[0]
-           console.log(style.className.includes("abc"))
-           if(check){
-                    style.classList.remove("abc")
-           }else{
-            style.classList.add("abc")
-           }
-          
-    }
     useEffect(() => {
         fetchBlog();
-        onHandleRemoveManager()
+        
     }, [searchValue]);
 
     const fetchBlog = async () => {

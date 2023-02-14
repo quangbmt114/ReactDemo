@@ -10,7 +10,8 @@ import { Fragment } from "react";
 import Register from "./pages/Register/Register";
 import Detail from "./pages/Detail";
 import ListPost from "./pages/ListPost";
-import Manager from "./pages/ManagerPage";
+import ManagerPage from "./pages/ManagerPage";
+import LayoutManager from "./Layout/LayoutOnLyManager"
 
 function App() {
   const publicRoutes = [
@@ -22,14 +23,15 @@ function App() {
     {path:"/register",component:Register},
     {path:"/post/*",component:Detail},
     {path:"/listpost", component:ListPost},
-    {path:"/manager_page",component:Manager}
+    {path:"/manager_page",component:ManagerPage, layout: null}
   ]
   return (
     <Router>
       <div className="App">
         <Routes>
           {publicRoutes.map((routes, index) => {
-            const Layout = routes.layout === null ? Fragment : DefaultLayout
+            const Layout = routes.layout===null? LayoutManager:DefaultLayout
+            
             const Page = routes.component
             return (
               <Route

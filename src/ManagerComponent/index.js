@@ -5,7 +5,7 @@ import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './component.css'
 import axios from 'axios'
-function ManagerComponent(props,{onReload}) {
+function ManagerComponent(props) {
    const [searchResult,setSearchResult]= useState([])
    const  limit =8;
    const API = async()=>{
@@ -43,7 +43,7 @@ function ManagerComponent(props,{onReload}) {
             onClick={ async()  =>{
                 const data = await axios.delete(`https://61a5e3c48395690017be8ed2.mockapi.io/blogs/article/${posts.id}`)
                 alert("xóa thành công !")
-                window.location.reload()
+                props.onReload(posts.id)
             }}
          />
             <p style={{ fontWeight: "bold", marginBottom: 5 }}>

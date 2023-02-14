@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import Header from "../Header/index";
+import HeaderManager from "../HeaderManager";
 
 export   const CheckConText = createContext(false)
 function DefaultLayout({ children }) {
@@ -16,7 +16,7 @@ useEffect(() => {
     return (
         <div>
         <CheckConText.Provider value={false}>
-        <Header onSetSearch={handleSetSearch}
+        <HeaderManager onSetSearch={handleSetSearch}
          />
         <Container style={{marginTop:50}}>
             <div className="content">
